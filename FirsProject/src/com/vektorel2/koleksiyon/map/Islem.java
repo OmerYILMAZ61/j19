@@ -3,12 +3,13 @@ package com.vektorel2.koleksiyon.map;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class Islem {
 
 	public static void main(String[] args) {
 		
-		Map<Integer, String> myMapp = new HashMap<>();
+		Map<Integer, String> myMapDolu = new HashMap<>();
 //		myMap.put("1", "Ahmet");	//key aynýysa deðer deðiþir !
 //		myMap.put("2", "Hasan");
 //		myMap.put("3", "Mehmet");
@@ -19,10 +20,17 @@ public class Islem {
 //		System.out.println(myMap.get("2"));
 		
 		MyMap myMap = new MyMap();
-		myMapp = myMap.veriEkle();
+		myMapDolu = myMap.veriEkle();
 		//myMap.veriGoster();
 		//System.out.println(myMapp);
 		//System.out.println(myMap.veriEkle());
-		myMap.veriGoster(myMapp);
+		myMap.veriGoster(myMapDolu);
+		for (Entry en : myMapDolu.entrySet()) {
+			if(en.getValue().equals("ahmet"))
+				en.setValue("mehmet");
+		}
+		System.out.println(myMapDolu);
+		//myMapDolu.put(1, "hasan");
+				
 	}
 }

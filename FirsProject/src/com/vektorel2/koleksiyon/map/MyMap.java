@@ -31,7 +31,7 @@ public class MyMap {
 	}
 	
 	public void veriGoster(Map<Integer, String> map){
-		map.entrySet();
+		//map.entrySet();
 		
 //		for (Entry<Integer, String> veri : map.entrySet()){
 //			System.out.println(veri.getKey());
@@ -40,11 +40,11 @@ public class MyMap {
 //		}
 		
 		Iterator<Entry<Integer, String>> it = map.entrySet().iterator();
-		while(it.hasNext());
+		while(it.hasNext()){
 		Entry en = (Entry)it.next();
 		System.out.println(en.getKey());
 		System.out.println(en.getValue());
-		
+		}
 	}
 	
 	
