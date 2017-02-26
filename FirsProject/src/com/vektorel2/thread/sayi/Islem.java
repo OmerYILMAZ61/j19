@@ -8,13 +8,30 @@ public class Islem {
 		
 		Thread isParcacigi1 = new Thread(sayi1);
 		Thread isParcacigi2 = new Thread(sayi2);
-
-		isParcacigi1.start();
-		System.out.println("alt satýr");
+		//runtime thread üretimi
+		Thread isparcacigi3 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
+		isParcacigi1.start();
 		isParcacigi2.start();
 		
-		isParcacigi1.interrupt();
+		synchronized (isParcacigi1) {
+			
+			try {
+				isParcacigi1.wait();
+				System.out.println("*-*-*-*-*-*-");
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
 		
 		
 		
