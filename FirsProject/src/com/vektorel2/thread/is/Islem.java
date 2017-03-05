@@ -4,8 +4,8 @@ public class Islem {
 
 	public static void main(String[] args) {
 		Ikinci ikinci = new Ikinci();
-		Thread ilkThread = new Thread(ikinci);
-		Thread runThread = new Thread(new Runnable() {
+		Thread is1 = new Thread(ikinci);
+		Thread is2 = new Thread(new Runnable() {
 			
 			@Override
 			public void run() {
@@ -18,15 +18,17 @@ public class Islem {
 							e.printStackTrace();
 						}
 					}
-					System.out.println("###");
+					System.out.println("###" +i);
 					i++;
 				}
 				
 			}
 		});
 		
-		ilkThread.start();
-		runThread.start();
+		is1.start();
+		is2.start();
+		
+		
 		
 		
 		

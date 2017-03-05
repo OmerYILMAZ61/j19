@@ -6,14 +6,14 @@ public class Ikinci implements Runnable {
 	public void run() {
 		int i = 0;
 		while (i < 200) {
-			if(i%50==50){
+			if(i%50==0){
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
-			System.out.println("***");
+			System.out.println("***" +i);
 			i++;
 		}
 	}
