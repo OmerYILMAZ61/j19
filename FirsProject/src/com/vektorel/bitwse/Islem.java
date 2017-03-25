@@ -1,4 +1,4 @@
-package bitwse;
+package com.vektorel.bitwse;
 
 public class Islem {
 

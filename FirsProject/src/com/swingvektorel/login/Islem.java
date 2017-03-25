@@ -1,10 +1,10 @@
-package com.swingvektorel.layout;
+package com.swingvektorel.login;
 
-public class Islem2 {
+public class Islem {
 
 	public static void main(String[] args) {
 		
-		//KartLayout kartLayout = new KartLayout();
+		
 		FrameIslemi frameIslemi = new FrameIslemi();
 		frameIslemi.setVisible(true);
 		
